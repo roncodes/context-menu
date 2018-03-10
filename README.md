@@ -1,5 +1,7 @@
 # context-menu
 
+This fork of context-menu makes a small modification that removes the dependency of setting a selector, allowing the context menu to be called programatically on listen events.
+
 A small (4.4kb / 1.7kb gzipped) JavaScript library for adding context menus to any HTML element.
 
 ```shell

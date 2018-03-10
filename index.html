@@ -23,8 +23,8 @@
 </head>
 <body>
 <p>Try right-clicking on each of the boxes below.</p>
-<div class="default-theme" tabindex="0">Default theme</div>
-<div class="minimal" tabindex="0">No theme</div>
+<div id="default-theme" tabindex="0">Default theme</div>
+<div id="minimal" tabindex="0">No theme</div>
 
 <script src="dist/context-menu.js"></script>
 <script>
@@ -36,8 +36,17 @@
     { name: 'Select All', fn: function(target) { console.log('Select All', target); }},
   ];
 
-  var cm1 = new ContextMenu('.default-theme', items);
-  var cm2 = new ContextMenu('.minimal', items, { className: 'ContextMenu--theme-custom', minimalStyling: true });
+  var cm1 = new ContextMenu(items);
+  var cm2 = new ContextMenu(items, { className: 'ContextMenu--theme-custom', minimalStyling: true });
+
+  /** event listener for elements **/
+  document.getElementById('default-theme').addEventListener('click', function(event) { 
+    cm1.show(event);
+  });
+
+  document.getElementById('minimal').addEventListener('click', function(event) { 
+    cm2.show(event);
+  });
 
   cm1.on('shown', () => console.log('Context menu shown'));
 </script>

@@ -1,5 +1,5 @@
 {
-  "name": "@mturco/context-menu",
+  "name": "@roncodes/context-menu",
   "version": "1.0.0",
   "description": "A small JavaScript library for adding context menus to any HTML element",
   "main": "dist/context-menu.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mturco/context-menu.git"
+    "url": "https://github.com/roncodes/context-menu.git"
   },
   "keywords": [],
   "author": "Matt Turco <matt.turco@gmail.com>",

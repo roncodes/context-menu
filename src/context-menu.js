@@ -30,11 +30,10 @@ function emit(el, type, data = {}) {
 }
 
 export default class ContextMenu {
-  constructor(selector, items, options = {
+  constructor(items, options = {
     className: '',
     minimalStyling: false,
   }) {
-    this.selector = selector;
     this.items = items;
     this.options = options;
     this.id = nextId++;
@@ -170,15 +169,6 @@ export default class ContextMenu {
     instances.splice(instances.indexOf(this), 1);
   }
 }
-
-// Listen for contextmenu event to show menu
-document.addEventListener('contextmenu', (e) => {
-  instances.forEach((menu) => {
-    if (e.target.matches(menu.selector)) {
-      menu.show(e);
-    }
-  });
-});
 
 // Listen for click event to hide menu
 document.addEventListener('click', (e) => {

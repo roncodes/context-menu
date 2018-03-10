@@ -14,7 +14,7 @@ export default {
       minimize: true,
     }),
     buble(),
-    uglify(),
+    // uglify(),
   ],
   output: [
     {

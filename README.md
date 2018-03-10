@@ -5,7 +5,7 @@ This fork of context-menu makes a small modification that removes the dependency
 A small (4.4kb / 1.7kb gzipped) JavaScript library for adding context menus to any HTML element.
 
 ```shell
-npm install @roncodes/context-menu
+npm install git+https://github.com/roncodes/context-menu.git
 ```
 
 [See demo](https://roncodes.github.io/context-menu/)

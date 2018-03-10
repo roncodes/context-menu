@@ -13,10 +13,9 @@ npm install @mturco/context-menu
 ### Constructor
 
 ```js
-new ContextMenu(selector, items[, options]);
+new ContextMenu(items[, options]);
 ```
 
-* `selector` (String) - Show context menus for elements matching this selector
 * `items` (Array) - Array of menu items objects in the format of:
   * `name` (String) - Label displayed for menu item
   * `fn` (Function) - `onclick` event handler for menu item
@@ -44,7 +43,7 @@ Removes DOM elements and event listeners.
 ```js
 import ContextMenu from 'context-menu';
 
-const menu = new ContextMenu('table tr', [
+const menu = new ContextMenu([
   { name: 'Add row', fn: () => { /* ... */ }},
   { name: 'Remove row', fn: () => { /* ... */ }},
 ]);

@@ -111,7 +111,9 @@ export default class ContextMenu {
     // Give context menu focus
     this.menu.focus();
     // Disable native context menu
-    e.preventDefault();
+    if(typeof e.preventDefault === 'function') {
+      e.preventDefault();
+    }
 
     emit(this.menu, 'shown');
   }

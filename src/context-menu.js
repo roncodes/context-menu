@@ -169,12 +169,3 @@ export default class ContextMenu {
     instances.splice(instances.indexOf(this), 1);
   }
 }
-
-// Listen for click event to hide menu
-document.addEventListener('click', (e) => {
-  instances.forEach((menu) => {
-    if (!e.target.matches(`[data-contextmenu="${menu.id}"], [data-contextmenu="${menu.id}"] *`)) {
-      menu.hide();
-    }
-  });
-});

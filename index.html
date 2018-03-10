@@ -41,11 +41,23 @@
 
   /** event listener for elements **/
   document.getElementById('default-theme').addEventListener('click', function(event) { 
+    event.preventDefault();
     cm1.show(event);
   });
 
   document.getElementById('minimal').addEventListener('click', function(event) { 
+    event.preventDefault();
     cm2.show(event);
+  });
+
+  /** close menu **/
+  document.addEventListener('click', function(event) {
+    if(event.target.id !== 'default-theme') {
+      cm1.hide();
+    }
+    if(event.target.id !== 'minimal') {
+      cm2.hide();
+    }
   });
 
   cm1.on('shown', () => console.log('Context menu shown'));
